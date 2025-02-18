@@ -239,7 +239,7 @@
             }
 
             .Path_Subheader {
-                font-size: 2rem;
+                font-size: 1.75rem;
                 font-weight: bold;
                 padding: 10px 20px;
                 border-radius: 5px;
@@ -253,7 +253,7 @@
                 background-color: #f5f4f0;
             }
 
-            /* Styling for the sections */
+
             .Path_Section {
                 display: none;
                 margin-top: 20px;
@@ -261,9 +261,37 @@
                 border-radius: 10px;
             }
 
-            #Path_409A:target, #Path_820:target {
+
+
+
+            #Path_409A {
                 display: block;
             }
+
+            #Path_820 {
+                display: none;
+            }
+
+            /* When #Path_820 is targeted, show it and hide #Path_409A */
+            #Path_820:target {
+                display: block;
+            }
+
+            #Path_820:target ~ #Path_409A {
+                display: none;
+            }
+
+            /* When #Path_409A is targeted, show it and hide #Path_820 */
+            #Path_409A:target {
+                display: block;
+            }
+
+            #Path_409A:target ~ #Path_820 {
+                display: none;
+            }
+
+
+
 
             .Path_SubSection {
                 display: grid;
@@ -302,26 +330,27 @@
                 <a href="#Path_409A" class="Path_Subheader">409A Valuations</a>
                 <a href="#Path_820" class="Path_Subheader">ASC 820 Valuations</a>
             </div>
-
-            <section id="Path_409A" class="Path_Section">
-                <div class="Path_SubSection">
-                    <div class="Path_body">
-                        <p>A 409A valuation determines a private company's fair market value to ensure compliance with IRS regulations, avoiding tax penalties while supporting stock option grants. Learn more about requirements and our processes here.</p>
-                        <a href="#" class="btn">Learn More</a>
+            <div id="Path_Div">
+                <section id="Path_409A" class="Path_Section">
+                    <div class="Path_SubSection">
+                        <div class="Path_body">
+                            <p>A 409A valuation determines a private company's fair market value to ensure compliance with IRS regulations, avoiding tax penalties while supporting stock option grants. Learn more about requirements and our processes here.</p>
+                            <a href="#" class="btn">Learn More</a>
+                        </div>
+                        <div class="Temp_img">Img</div>
                     </div>
-                    <div class="Temp_img">Img</div>
-                </div>
-            </section>
+                </section>
 
-            <section id="Path_820" class="Path_Section">
-                <div class="Path_SubSection">
-                    <div class="Path_body">
-                        <p>An ASC 820 valuation determines the fair value of assets and liabilities using market-based data, ensuring compliance with accounting standards for financial reporting.<br>Learn more about requirements and our processes here.</p>
-                        <a href="#" class="btn">Learn More</a>
+                <section id="Path_820" class="Path_Section">
+                    <div class="Path_SubSection">
+                        <div class="Path_body">
+                            <p>An ASC 820 valuation determines the fair value of assets and liabilities using market-based data, ensuring compliance with accounting standards for financial reporting.Learn more about requirements and our processes here.</p>
+                            <a href="#" class="btn">Learn More</a>
+                        </div>
+                        <div class="Temp_img">Img</div>
                     </div>
-                    <div class="Temp_img">Img</div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
 
 
