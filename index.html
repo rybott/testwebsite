@@ -22,7 +22,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 55px; /* Adjust if needed */
+            height: 60px; /* Adjust if needed */
             background-color:#131a15;
             z-index: 1000;
             display: flex;
@@ -43,7 +43,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 10%;
+            gap: 7%;
             font-family: 'Times New Roman', Times, serif;
             font-weight:bolder;
 
@@ -67,14 +67,14 @@
         }
 
         .logo_child img{
-            height: 40px;
-            padding-right: 10%;
+            height: 60px;
+            padding-right: 1%;
         }
 
         .navbar {
             display: flex;
-            font-size:0.75rem;
-            gap: 10px; /* Adjust spacing between menu items */
+            font-size: 0.95rem;
+            gap: 12px; /* Adjust spacing between menu items */
             align-items: baseline;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -85,9 +85,7 @@
         }
 
         .nav_child:hover {
-            padding: .1em .3em;
-            background-color: #2C3930;
-            border-radius: 5px;
+            color: #beae89;
         }
 
         #account {
@@ -95,6 +93,7 @@
             background-color: #2C3930;
             padding: .2em .6em;
             border-radius: 3px;
+            font-weight: 400;
         }
 
 
@@ -194,11 +193,8 @@
                 <div class="nav_child">
                     <div x-data="{ isOpen: false }" class="relative inline-block">
                         <!-- Dropdown toggle button -->
-                        <button @click="isOpen = !isOpen" class="relative z-10 block p-1 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none" style="display: flex; flex-direction:row; align-items: baseline; gap:10px;">
+                        <button @click="isOpen = !isOpen" class="relative z-10 block p-1" style="display: flex; flex-direction:row; align-items: baseline; gap:10px;">
                             <a>Services</a>
-                            <svg class="w-3 h-3 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
                         </button>
 
                         <!-- Dropdown menu -->
@@ -212,16 +208,11 @@
                             x-transition:leave-end="opacity-0 scale-90"
                             class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800"
                         >
-                            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> your profile </a>
-                            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Your projects </a>
-                            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Help </a>
-                            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Settings </a>
-                            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Sign Out </a>
+                            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> ASC 820 Valuations </a>
+                            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 409a Valuations </a>
                         </div>
                     </div>
                 </div>
-                <div class="nav_child">ASC 820 Valuations</div>
-                <div class="nav_child">409a Valuations</div>
                 <div class="nav_child">Pricing</div>
                 <div class="nav_child">Contact</div>
                 <div class="nav_child" id="account">Account</div>
@@ -236,7 +227,7 @@
             <div class="overlay"></div>
             <div class="text-container">
                 <h1><b>NORDIS </b><br> VALUATION GROUP</h1>
-                <p>Specializing in 409A and ASC 820 Valuations</p>
+                <p>Specializing in 409A and Portfolio Valuations</p>
                 <div class="Contact_btn">
                     <a href="#" class="btn">Get Started</a>
                 </div>
@@ -247,27 +238,27 @@
 
 
        <!-- # Testing Tailwind-->
-        <section class="bg-white dark:bg-gray-900">
+        <section class="bg-white dark:bg-stone-50">
             <div class="px-6 py-10 pb-0 mx-auto">
-                <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">explore our <br> awesome <span class="text-Blue-250">Components</span></h1>
+                <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Choose a Service</h1>
             </div>
-            <div class="container px-6 py-10 pt-3 mx-auto">
-                <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
-                    <div class="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-200">
+            <div class="container px-6 py-10 pt-0 mx-auto">
+                <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-2">
+                    <div class="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-200" style="background-color: #2c3930;">
                         <span class="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Copy & paste components</h1>
+                        <h1 class="text-xl font-semibold text-stone-50 capitalize" >409a Valuations</h1>
 
-                        <p class="text-gray-500 dark:text-gray-300">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                        <p class="text-stone-400">
+                            409A valuation determines a private company's fair market value to ensure compliance with IRS regulations, avoiding tax penalties while supporting stock option grants.
                         </p>
 
                         <a href="#" class="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
-                            <span class="mx-1">read more</span>
+                            <span class="mx-1" style="color: #DCD7C9">read more</span>
                             <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </a>
                     </div>
@@ -279,10 +270,10 @@
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Zero Configuration</h1>
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Portfolio Valuation</h1>
 
                         <p class="text-gray-500 dark:text-gray-300">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                            A Porfolio Valuation, also known as a ASC 820 valuation, determines the fair value of assets and liabilities using market-based data, ensuring compliance with accounting standards for financial reporting.
                         </p>
 
                         <a href="#" class="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
@@ -291,24 +282,7 @@
                         </a>
                     </div>
 
-                    <div class="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
-                        <span class="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                            </svg>
-                        </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Simple & clean designs</h1>
-
-                        <p class="text-gray-500 dark:text-gray-300">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
-                        </p>
-
-                        <a href="#" class="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
-                            <span class="mx-1">read more</span>
-                            <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -324,16 +298,7 @@
                         <p class="max-w-xl mt-6">Ask us everything and we would love to hear from you</p>
 
                         <div class="mt-6 space-y-8 md:mt-8">
-                            <p class="flex items-start -mx-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
 
-                                <span class="mx-2 text-white truncate w-72">
-                                    Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522
-                                </span>
-                            </p>
 
                             <p class="flex items-start -mx-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
