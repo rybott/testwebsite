@@ -459,6 +459,16 @@
     padding: 1rem;
 
     }
+
+
+    details > summary {
+    list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+    display: none;
+    }
+
+
 </style>
 
 
@@ -467,7 +477,7 @@
 <div class="w-full max-w-[80%]">
     <!--Header-->
     <section>
-        <h1 class="text-3xl text-center mt-10 font-bold">Summit Ridge Capital Partners, LLC Summary</h1>
+        <h1 class="text-3xl text-left mt-5 mb-5 font-bold">Summit Ridge Capital Partners, LLC Summary</h1>
     </section>
 
     <!--Dashboard-->
@@ -576,11 +586,11 @@
 
             <div class="box bg-white rounded-lg shadow p-4">
                 <p class="text-sm mb-1 capitalize text-gray-500">Historical Growth Rate</p>
-                <div class="flex flex-row gap-0 flex-wrap">
-                  <div class="w-full sm:w-1/2 h-[300px]">
+                <div class="grid grid-cols-[1fr_1fr] gap-4 ">
+                  <div class="h-[300px]">
                     <canvas id="comboChart" class="w-full h-full"></canvas>
                   </div>
-                  <div class="w-full sm:w-1/2 h-[300px]">
+                  <div class="h-[300px]">
                     <canvas id="comboChart2" class="w-full h-full"></canvas>
                   </div>
                 </div>
@@ -590,7 +600,459 @@
 
         <!--Row 3-->
         <div class="dashboard3">
-            <div class="box bg-white rounded-lg shadow p-4">Box 7</div>
+
+
+            <div class="box bg-white rounded-lg shadow p-4">
+
+
+                <div class= "grid grid-cols-[1fr_1fr] text-left text-gray-500 font-semibold">
+                    <div></div>
+
+                    <div class="text-sm slashed-zero text-gray-500 tabular-nums text-center">
+                        <div>Fiscal Year Ending</div>
+                    </div>
+                </div>
+
+
+                <!-- Income Statement-->
+                <div class= "grid grid-cols-[1fr_1fr] text-left text-gray-500 border-b-2 font-semibold">
+                    <div>Income Statement</div>
+
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-500 tabular-nums text-right">
+                        <div>12/31/22</div>
+                        <div>12/31/23</div>
+                        <div>12/31/24</div>
+                    </div>
+                </div>
+
+                <!-- Accounts -->
+                <div class="mb-1 text-gray-700 text-sm font-semibold">
+                    <div class="grid grid-cols-[1fr_1fr] pt-1">
+                        <!-- Revenue -->
+                        <div class="font-bold">Revenue</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums font-bold">
+                        <div>52,500.0</div><div>64,300.0</div><div>68,900.0</div>
+                        </div>
+
+                        <!-- Cost of Goods Sold -->
+                        <div>Cost of Goods Sold</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>(20,100.0)</div><div>(23,450.0)</div><div>(24,800.0)</div>
+                        </div>
+
+                        <!-- Gross Profit -->
+                        <div class="font-semibold">Gross Profit</div>
+                        <div class="font-semibold grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>32,400.0</div><div>40,850.0</div><div>44,100.0</div>
+                        </div>
+
+                        <!-- Operating Expenses -->
+                        <div>Operating Expenses</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>(14,700.0)</div><div>(15,950.0)</div><div>(17,200.0)</div>
+                        </div>
+
+                        <!-- EBITDA -->
+                        <div class="font-bold">EBITDA</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums font-bold">
+                        <div>19,100.0</div><div>27,200.0</div><div>29,000.0</div>
+                        </div>
+
+                        <!-- Depreciation & Amortization -->
+                        <div>Depreciation & Amortization</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>(1,400.0)</div><div>(1,450.0)</div><div>(2,100.0)</div>
+                        </div>
+
+                        <!-- Operating Income -->
+                        <div>Operating Income</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>17,700.0</div><div>24,900.0</div><div>26,900.0</div>
+                        </div>
+
+                        <!-- Interest Expense -->
+                        <div>Interest Expense</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>(1,300.0)</div><div>(1,400.0)</div><div>(1,500.0)</div>
+                        </div>
+
+                        <!-- Interest Income -->
+                        <div>Interest Income</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>350.0</div><div>370.0</div><div>390.0</div>
+                        </div>
+
+                        <!-- Income Before Taxes -->
+                        <div>Income Before Taxes</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>16,750.0</div><div>23,870.0</div><div>25,790.0</div>
+                        </div>
+
+                        <!-- Provision for Income Taxes -->
+                        <div>Income Tax Provision</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>(3,300.0)</div><div>(4,774.0)</div><div>(5,158.0)</div>
+                        </div>
+
+                        <!-- Net Income -->
+                        <div class="font-bold">Net Income</div>
+                        <div class="font-bold grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>13,450.0</div><div>19,096.0</div><div>20,632.0</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="m-10"></div>
+
+                <!-- Updated Balance Sheet-->
+                <div class= "grid grid-cols-[1fr_1fr] text-left text-gray-500 border-b-2 font-semibold">
+                    <div>Balance Sheet</div>
+
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-500 tabular-nums text-right">
+                        <div>12/31/22</div>
+                        <div>12/31/23</div>
+                        <div>12/31/24</div>
+                    </div>
+                </div>
+                <!-- CURRENT ASSETS -->
+                <details class="mb-1">
+                    <summary class="grid grid-cols-[1fr_1fr] cursor-pointer font-semibold text-gray-700 text-sm pb">
+                    <div>Current Assets</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right">
+                        <div>29,118.0</div>
+                        <div>32,908.0</div>
+                        <div>34,482.0</div>
+                    </div>
+                    </summary>
+                    <div class="grid grid-cols-[1fr_1fr] text-gray-700 text-sm pt-1">
+                    <div class="ml-4">Total Cash & ST Investments</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums ">
+                        <div>8,738.0</div><div>13,441.0</div><div>14,591.0</div>
+                    </div>
+                    <div class="ml-4">Total Receivables</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums ">
+                        <div>7,682.0</div><div>8,348.0</div><div>8,155.0</div>
+                    </div>
+                    <div class="ml-4">Inventory</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums ">
+                        <div>1,552.0</div><div>1,161.0</div><div>1,289.0</div>
+                    </div>
+                    <div class="ml-4">Other Current Assets</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums ">
+                        <div>11,146.0</div><div>9,581.0</div><div>10,447.0</div>
+                    </div>
+                    </div>
+                </details>
+
+                <!-- OTHER ASSETS -->
+                <details class="mb-1">
+                    <summary class="grid grid-cols-[1fr_1fr] cursor-pointer font-semibold text-gray-700 text-sm pb">
+                    <div>Other Assets</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right">
+                        <div>98,125.0</div>
+                        <div>101,812.0</div>
+                        <div>101,013.0</div>
+                    </div>
+                    </summary>
+                    <div class="grid grid-cols-[1fr_1fr] text-gray-700 text-sm pt-1">
+                    <div class="ml-4">Net Property, Plant & Equipment</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums ">
+                        <div>8,212.0</div><div>8,200.0</div><div>8,249.0</div>
+                    </div>
+                    <div class="ml-4">Long-term Investments</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums ">
+                        <div>1,610.0</div><div>1,589.0</div><div>1,691.0</div>
+                    </div>
+                    <div class="ml-4">Other Long-term Assets</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums ">
+                        <div>88,303.0</div><div>92,023.0</div><div>92,073.0</div>
+                    </div>
+                    </div>
+                </details>
+
+                <!-- TOTAL ASSETS -->
+                <div class="grid grid-cols-[1fr_1fr] font-bold text-gray-700 text-sm mb-1">
+                    <div>Total Assets</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                    <div>127,243.0</div><div>135,241.0</div><div>137,175.0</div>
+                    </div>
+                </div>
+
+                <!-- CURRENT LIABILITIES -->
+                <details class="mb-1">
+                    <summary class="grid grid-cols-[1fr_1fr] cursor-pointer font-semibold text-gray-700 text-sm pb">
+                    <div>Current Liabilities</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right">
+                        <div>31,505.0</div>
+                        <div>34,122.0</div>
+                        <div>33,142.0</div>
+                    </div>
+                    </summary>
+                    <div class="grid grid-cols-[1fr_1fr] text-gray-700 text-sm pt-1">
+                    <div class="ml-4">Accounts Payable</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>4,051.0</div><div>4,132.0</div><div>4,032.0</div>
+                    </div>
+                    <div class="ml-4">Current Portion of Long Term Debt</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>4,685.0</div><div>6,805.0</div><div>4,891.0</div>
+                    </div>
+                    <div class="ml-4">Current Portion of Leases</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums ">
+                        <div>849.0</div><div>941.0</div><div>966.0</div>
+                    </div>
+                    <div class="ml-4">Other Current Liabilities</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums pb-1">
+                        <div>21,820.0</div><div>22,744.0</div><div>23,253.0</div>
+                    </div>
+                    </div>
+                </details>
+
+                <!-- NON-CURRENT LIABILITIES -->
+                <details class="mb-1">
+                    <summary class="grid grid-cols-[1fr_1fr] cursor-pointer font-semibold text-gray-700 text-sm pb">
+                    <div>Non-Current Liabilities</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right">
+                        <div>73,753.0</div>
+                        <div>78,506.0</div>
+                        <div>76,240.0</div>
+                    </div>
+                    </summary>
+                    <div class="grid grid-cols-[1fr_1fr] text-gray-700 text-sm pt-1">
+                    <div class="ml-4">Long-Term Debt</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>46,065.0</div><div>49,742.0</div><div>49,081.0</div>
+                    </div>
+                    <div class="ml-4">Long-Term Leases</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>2,350.0</div><div>2,947.0</div><div>3,058.0</div>
+                    </div>
+                    <div class="ml-4">Other Non-Current Liabilities</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums pb-1">
+                        <div>25,338.0</div><div>25,817.0</div><div>24,101.0</div>
+                    </div>
+                    </div>
+                </details>
+
+                <!-- TOTAL LIABILITIES (not collapsible) -->
+                <div class="grid grid-cols-[1fr_1fr] font-bold text-gray-700 text-sm ">
+                    <div>Total Liabilities</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                    <div>105,222.0</div><div>112,628.0</div><div>109,782.0</div>
+                    </div>
+                </div>
+
+                <!-- EQUITY -->
+                <details class="mb-1">
+                    <summary class="grid grid-cols-[1fr_1fr] cursor-pointer font-semibold text-gray-700 text-sm pt-1">
+                    <div>Equity</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right">
+                        <div>22,021.0</div>
+                        <div>22,613.0</div>
+                        <div>27,393.0</div>
+                    </div>
+                    </summary>
+                    <div class="grid grid-cols-[1fr_1fr] text-gray-700 text-sm pt-2">
+                    <div class="ml-4">Total Preferred Equity</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>0.0</div><div>0.0</div><div>0.0</div>
+                    </div>
+                    <div class="ml-4">Total Common Equity</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                        <div>21,944.0</div><div>22,533.0</div><div>27,307.0</div>
+                    </div>
+                    <div class="ml-4">Minority Interest</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums pb-1">
+                        <div>77.0</div><div>80.0</div><div>86.0</div>
+                    </div>
+                    </div>
+                </details>
+
+                <!-- TOTAL LIABILITIES & EQUITY -->
+                <div class="grid grid-cols-[1fr_1fr] font-bold text-gray-700 text-sm">
+                    <div>Total Liabilities and Equity</div>
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-right tabular-nums">
+                    <div>127,243.0</div><div>135,241.0</div><div>137,175.0</div>
+                    </div>
+                </div>
+
+                <div class="m-10"></div>
+
+                <!-- Cash Flow Statement-->
+                <div class= "grid grid-cols-[1fr_1fr] text-left text-gray-500 border-b-2 font-semibold">
+                    <div>Cash Flow Statement</div>
+
+                    <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-500 tabular-nums text-right">
+                        <div>12/31/22</div>
+                        <div>12/31/23</div>
+                        <div>12/31/24</div>
+                    </div>
+                </div>
+
+                 <!-- CASH FROM OPERATIONS -->
+                 <details class="mb-1">
+                    <summary class= "grid grid-cols-[1fr_1fr] cursor-pointer font-semibold text-gray-700 text-sm  pb-0">
+                        <div>Cash from Operations</div>
+
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right">
+                            <div>10,435.0</div>
+                            <div>13,931.0</div>
+                            <div>13,445.0</div>
+                        </div>
+                    </summary>
+                    <div class= "grid grid-cols-[1fr_1fr] cursor-pointer text-gray-700 text-sm  pt-2">
+                        <div class="ml-4">Net Income</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right">
+                            <div>1,639.0</div>
+                            <div>7,502.0</div>
+                            <div>6,023.0</div>
+                        </div>
+                    </div>
+                    <div class= "grid grid-cols-[1fr_1fr] cursor-pointer text-gray-700 text-sm  pb">
+                        <div class="ml-4">Depreciation & Amort.</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right">
+                            <div>4,802.0</div>
+                            <div>4,396.0</div>
+                            <div>4,667.0</div>
+                        </div>
+                    </div>
+                    <div class= "grid grid-cols-[1fr_1fr] cursor-pointer text-gray-700 text-sm  pb-2">
+                        <div class="ml-4">Change in Working Capital</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right">
+                            <div>202.0</div>
+                            <div>218.0</div>
+                            <div>1,313.0</div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- CASH FROM INVESTING -->
+                <details class="mb-1">
+                    <summary class= "grid grid-cols-[1fr_1fr] cursor-pointer font-semibold text-gray-700 text-sm  pb">
+                        <div>Cash from Investing</div>
+
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right">
+                            <div>(4,220.0)</div>
+                            <div>(7,070.0)</div>
+                            <div>(4,937.0)</div>
+                        </div>
+                    </summary>
+                    <div class= "grid grid-cols-[1fr_1fr] cursor-pointer text-gray-700 text-sm  pt-2">
+                        <div class="ml-4">Capital Expenditure</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right pb-2">
+                            <div>(4,220.0)</div>
+                            <div>(7,070.0)</div>
+                            <div>(4,937.0)</div>
+                        </div>
+                    </div>
+                </details>
+
+
+
+                <!-- CASH FROM FINANCING -->
+                <details class="mb-2">
+                    <summary class= "grid grid-cols-[1fr_1fr] cursor-pointer font-semibold text-gray-700 text-sm  pb-0">
+                        <div>Cash from Financing</div>
+
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right">
+                            <div>(4,958.0)</div>
+                            <div>(1,769.0)</div>
+                            <div>(7,079.0)</div>
+                        </div>
+                    </summary>
+                    <div class= "grid grid-cols-[1fr_1fr] cursor-pointer text-gray-700 text-sm  pt-2">
+                        <div class="ml-4">Total Debt Issued</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right pb-0">
+                            <div>8,021.0</div>
+                            <div>9,586.0</div>
+                            <div>5,735.0</div>
+                        </div>
+                    </div>
+                    <div class= "grid grid-cols-[1fr_1fr] cursor-pointer text-gray-700 text-sm  pt-0">
+                        <div class="ml-4">Total Debt Repaid</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right pb-0">
+                            <div>(6,800.0)</div>
+                            <div>(5,089.0)</div>
+                            <div>(6,615.0)</div>
+                        </div>
+                    </div>
+                    <div class= "grid grid-cols-[1fr_1fr] cursor-pointer text-gray-700 text-sm  pt-0">
+                        <div class="ml-4">Issuance of Common Stock</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right pb-0">
+                            <div>279.0</div>
+                            <div>414.0</div>
+                            <div>745.0</div>
+                        </div>
+                    </div>
+                    <div class= "grid grid-cols-[1fr_1fr] cursor-pointer text-gray-700 text-sm  pt-0">
+                        <div class="ml-4">Repurchase of Common</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right pb-0">
+                            <div>(407.0)</div>
+                            <div>(402.0)</div>
+                            <div>(651.0)</div>
+                        </div>
+                    </div>
+                    <div class= "grid grid-cols-[1fr_1fr] cursor-pointer text-gray-700 text-sm  pt-0">
+                        <div class="ml-4">Issuance of Pref. Stock</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right pb-0">
+                            <div>0.0</div>
+                            <div>0.0</div>
+                            <div>0.0</div>
+                        </div>
+                    </div>
+                    <div class= "grid grid-cols-[1fr_1fr] cursor-pointer text-gray-700 text-sm  pt-0">
+                        <div class="ml-4">Repurchase of Preferred</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right pb-0">
+                            <div>0.0</div>
+                            <div>0.0</div>
+                            <div>0.0</div>
+                        </div>
+                    </div>
+                    <div class= "grid grid-cols-[1fr_1fr] cursor-pointer text-gray-700 text-sm  pt-0">
+                        <div class="ml-4">Total Dividends Paid</div>
+                        <div class="grid grid-cols-[1fr_1fr_1fr] text-sm slashed-zero text-gray-700 tabular-nums text-right pb-2">
+                            <div>(5,948.0)</div>
+                            <div>(6,040.0)</div>
+                            <div>(6,147.0)</div>
+                        </div>
+                    </div>
+                </details>
+
+
+                <!-- FINAL TOTALS -->
+                <div class="">
+                    <table class="w-full text-sm text-gray-700">
+                    <tbody>
+                        <tr class="font-bold">
+                        <td class="pt-1">Net Change in Cash</td>
+                        <td class="pt-1 text-right">1,031.0</td>
+                        <td class="pt-1 text-right">5,101.0</td>
+                        <td class="pt-1 text-right">1,071.0</td>
+                        </tr>
+                        <tr>
+                        <td class=" pl-4">Cash Interest Paid</td>
+                        <td class="text-right">1,401.0</td>
+                        <td class="text-right">1,668.0</td>
+                        <td class="text-right">1,723.0</td>
+                        </tr>
+                        <tr>
+                        <td class="pl-4">Cash Taxes Paid</td>
+                        <td class="text-right">1,865.0</td>
+                        <td class="text-right">1,564.0</td>
+                        <td class="text-right">1,723.0</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+
             <div class="box bg-white rounded-lg shadow p-4">Box 8</div>
         </div>
 
@@ -603,52 +1065,49 @@
               data: {
                 labels: ['Q1', 'Q2', 'Q3', 'Q4'],
                 datasets: [
-                  {
-                    type: 'bar',
-                    label: 'Revenue',
-                    data: [12000, 19000, 3000, 5000],
-                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                {
+                    type: 'line',
+                    label: 'Profit',
+                    data: [2000, 600, 3000, 2000],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2,
+                    fill: false,
                   },
                   {
                     type: 'line',
                     label: 'Profit',
-                    data: [3000, 5000, 1000, 2000],
+                    data: [3000, 3000, 1000, 2000],
                     borderColor: 'rgba(255, 99, 132, 1)',
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderWidth: 2,
-                    fill: true,
+                    fill: false,
                   }
                 ]
               },
               options: {
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {
-    legend: { position: 'top' },
-    title: { display: true, text: 'Revenue vs. Profit' }
-  },
-  scales: {
-    x: {
-      grid: { display: false }  // remove x-axis grid
-    },
-    y: {
-      beginAtZero: true,
-      grid: { display: false }  // remove y-axis grid
-    }
-  }
-}
-
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top' },
+                    title: { display: false, text: 'Revenue Growth Rate' }
+                },
+                scales: {
+                    y: {
+                    beginAtZero: false,
+                    grid: { display: false },
+                    ticks: {
+                        callback: function(value) {
+                        return `$${value.toLocaleString()}`;  // optional formatting
+                        },
+                        // manually define tick positions:
+                        stepSize: 5000, // not needed when using 'values'
+                    }
+                    },
+                    x: {
+                    grid: { display: false }
+                    }
+                }
+                }
             });
-
-
-
-
-
-
-
-
-
-
 
 
             const ctx2 = document.getElementById('comboChart2').getContext('2d');
@@ -678,11 +1137,26 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                  legend: { position: 'top' },
-                  title: { display: true, text: 'Revenue vs. Profit (Chart 2)' }
+                    legend: { position: 'top' },
+                    title: { display: false, text: 'EBITA and Ma' }
                 },
-                scales: { y: { beginAtZero: true } }
-              }
+                scales: {
+                    y: {
+                    beginAtZero: false,
+                    grid: { display: false },
+                    ticks: {
+                        callback: function(value) {
+                        return `$${value.toLocaleString()}`;  // optional formatting
+                        },
+                        // manually define tick positions:
+                        stepSize: 5000, // not needed when using 'values'
+                    }
+                    },
+                    x: {
+                    grid: { display: false }
+                    }
+                }
+                }
             });
             </script>
 
