@@ -186,8 +186,8 @@
 <body>
 
 <header>
-    <nav x-data="{ isOpen: false }" class="relative" style="background-color: #131a15; color: #dbd4bf">
-        <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+    <nav x-data="{ isOpen: false }" class="relative flex justify-between" style="background-color: #131a15; color: #dbd4bf">
+        <div class="container px-6 py-4 w-full flex justify-between items-center">
             <div class="flex items-center justify-between w-full">
                 <div class="logo">
                     <div class="logo_child"><a href="index.html">
@@ -348,18 +348,15 @@
 </header>
 
 <section class="flex flex-row min-h-screen bg-gray-100">
-    <div id="Sidebar" class="w-40">
-        <aside class="flex flex-col w-40 h-screen px-5 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
-            <a href="#">
-                <img class="w-auto h-7" src="https://merakiui.com/images/logo.svg" alt="">
-            </a>
+    <div id="Sidebar" class="w-40" style="background-color: #131a15; color: #dbd4bf">
+        <aside class="flex flex-col w-40 h-screen px-5 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700" style="background-color: #131a15; color: #dbd4bf">
 
             <div class="flex flex-col justify-between flex-1 mt-6">
                 <nav class="-mx-3 space-y-6 ">
                     <div class="space-y-3 ">
-                        <label class="px-3 text-xs text-gray-500 uppercase dark:text-gray-400">analytics</label>
+                        <label class="px-3 text-xs uppercase ">analytics</label>
 
-                        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                        <a class="flex items-center px-3 py-2  transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
                             </svg>
@@ -367,7 +364,7 @@
                             <span class="mx-2 text-sm font-medium">Dashboard</span>
                         </a>
 
-                        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                        <a class="flex items-center px-3 py-2 transition-colors duration-300 transform rounded-lg  hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
                             </svg>
@@ -377,9 +374,9 @@
                     </div>
 
                     <div class="space-y-3 ">
-                        <label class="px-3 text-xs text-gray-500 uppercase dark:text-gray-400">content</label>
+                        <label class="px-3 text-xs  uppercase ">content</label>
 
-                        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                        <a class="flex items-center px-3 py-2 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
                             </svg>
@@ -387,7 +384,7 @@
                             <span class="mx-2 text-sm font-medium">Guides</span>
                         </a>
 
-                        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                        <a class="flex items-center px-3 py-2 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
                             </svg>
@@ -395,7 +392,7 @@
                             <span class="mx-2 text-sm font-medium">Hotspots</span>
                         </a>
 
-                        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                        <a class="flex items-center px-3 py-2  transition-colors duration-300 transform rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
                             </svg>
@@ -405,9 +402,9 @@
                     </div>
 
                     <div class="space-y-3 ">
-                        <label class="px-3 text-xs text-gray-500 uppercase dark:text-gray-400">Customization</label>
+                        <label class="px-3 text-xs uppercase">Customization</label>
 
-                        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                        <a class="flex items-center px-3 py-2 transition-colors duration-300 transform rounded-lg  hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
                             </svg>
@@ -415,7 +412,7 @@
                             <span class="mx-2 text-sm font-medium">Themes</span>
                         </a>
 
-                        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                        <a class="flex items-center px-3 py-2 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -600,8 +597,6 @@
 
         <!--Row 3-->
         <div class="dashboard3">
-
-
             <div class="box bg-white rounded-lg shadow p-4">
 
 
@@ -1052,9 +1047,154 @@
             </div>
 
 
+            <div class="box bg-white rounded-lg shadow p-4">
 
-            <div class="box bg-white rounded-lg shadow p-4">Box 8</div>
+
+                <div>
+                    duPont Analysis
+                    <canvas id="dupontChart" class="w-full h-64"></canvas>
+                </div>
+                <div class="m-5"></div>
+                <div>
+                    <table class="w-full text-sm text-gray-700 tabular-nums">
+                        <thead class="text-left text-gray-500 border-b">
+                          <tr>
+                            <th class="py-1">Equity Class</th>
+                            <th class="py-1 text-right">Strike Price</th>
+                            <th class="py-1 text-right">Total Shares</th>
+                            <th class="py-1 text-right">Fair Market Value</th>
+                          </tr>
+                        </thead>
+                        <tbody class="text-right">
+                          <!-- Preferred -->
+                          <tr>
+                            <td class="text-left">Series A Preferred</td>
+                            <td class="">1</td>
+                            <td class="">1,000</td>
+                            <td class="">1,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Series B Preferred</td>
+                            <td class="">2</td>
+                            <td class="">1,000</td>
+                            <td class="">2,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Series C Preferred</td>
+                            <td class="">3</td>
+                            <td class="">1,000</td>
+                            <td class="">3,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Series D Preferred</td>
+                            <td class="">4</td>
+                            <td class="">1,000</td>
+                            <td class="">4,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Series E Preferred</td>
+                            <td class="">5</td>
+                            <td class="">1,000</td>
+                            <td class="">5,000,000</td>
+                        </tr>
+
+                        <tr>
+                            <td class="opacity-0">,</td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                        </tr>
+
+
+
+
+                          <!-- Options -->
+                        <tr>
+                            <td class="text-left">Series A Preferred Options</td>
+                            <td class="">1</td>
+                            <td class="">1,000</td>
+                            <td class="">1,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Series B Preferred Options</td>
+                            <td class="">2</td>
+                            <td class="">1,000</td>
+                            <td class="">2,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Series C Preferred Options</td>
+                            <td class="">3</td>
+                            <td class="">1,000</td>
+                            <td class="">3,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Series D Preferred Options</td>
+                            <td class="">4</td>
+                            <td class="">1,000</td>
+                            <td class="">4,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Series E Preferred Options</td>
+                            <td class="">5</td>
+                            <td class="">1,000</td>
+                            <td class="">5,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-0">,</td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                        </tr>
+
+                          <!-- Warrants -->
+                        <tr>
+                            <td class="text-left">Series A Preferred Warrants</td>
+                            <td class="">1</td>
+                            <td class="">1,000</td>
+                            <td class="">1,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Series B Preferred Warrants</td>
+                            <td class="">2</td>
+                            <td class="">1,000</td>
+                            <td class="">2,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Series C Preferred Warrants</td>
+                            <td class="">3</td>
+                            <td class="">1,000</td>
+                            <td class="">3,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Series E Preferred Warrants</td>
+                            <td class="">5</td>
+                            <td class="">1,000</td>
+                            <td class="">5,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-0">,</td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                        </tr>
+
+                          <!-- Common Equity -->
+                        <tr class="font-semibold border-t border-gray-200">
+                            <td>Common Equity</td>
+                            <td class="">0</td>
+                            <td class="">1,000,000</td>
+                            <td class="">1,000,000</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                </div>
+
+            </div>
         </div>
+        </section>
+        </div>
+        </div>
+        </section>
 
 
 
@@ -1158,6 +1298,86 @@
                 }
                 }
             });
+
+            const ctx3 = document.getElementById('dupontChart').getContext('2d');
+            const dupontChart = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: ['2021', '2022', '2023', '2024'],
+                datasets: [
+                {
+                    label: 'Net Profit Margin',
+                    data: [10.2, 11.5, 12.1, 11.7], // in %
+                    backgroundColor: '#d84c6f',
+                    yAxisID: 'y1',
+                },
+                {
+                    label: 'Asset Turnover',
+                    data: [0.55, 0.62, 0.59, 0.57], // multiple
+                    backgroundColor: '#2da69a',
+                    yAxisID: 'y1',
+                },
+                {
+                    label: 'Leverage Factor',
+                    data: [6.8, 6.5, 6.1, 5.8], // multiple
+                    backgroundColor: '#c1c1c1',
+                    yAxisID: 'y1',
+                },
+                {
+                    label: 'Return on Equity',
+                    data: [38.2, 45.9, 43.9, 38.6], // in %
+                    type: 'line',
+                    borderColor: '#000000',
+                    backgroundColor: '#000000',
+                    borderWidth: 2,
+                    tension: 0.2,
+                    yAxisID: 'y2',
+                    pointRadius: 3,
+                    fill: false
+                }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                legend: {
+                    position: 'bottom',
+                },
+                title: {
+                    display: true,
+                    text: 'Dupont Analysis'
+                }
+                },
+                scales: {
+                y1: {
+                    beginAtZero: false,
+                    position: 'left',
+                    title: {
+                    display: true,
+                    text: 'Multiples / %',
+                    },
+                    ticks: {
+                    callback: value => value + '%',
+                    },
+                },
+                y2: {
+                    beginAtZero: false,
+                    position: 'right',
+                    title: {
+                    display: true,
+                    text: 'Return on Equity (%)'
+                    },
+                    grid: {
+                    drawOnChartArea: false,
+                    },
+                    ticks: {
+                    callback: value => value + '%',
+                    },
+                }
+                }
+            }
+            });
+
             </script>
 
 
@@ -1168,295 +1388,6 @@
 
 
 
-
-
-
-
-    <section>
-        <style>
-            .custom-grid {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              gap: 1rem; /* Tailwind's gap-4 = 1rem */
-            }
-
-            .custom-grid .row-2 {
-              grid-column: span 2;
-            }
-
-            @media (max-width: 1024px) {
-              .custom-grid {
-                grid-template-columns: 1fr; /* Stack cards on smaller screens */
-              }
-
-              .custom-grid .row-2 {
-                grid-column: span 1;
-              }
-            }
-          </style>
-
-          <div class="flex justify-center">
-            <div class="w-full max-w-[80%] mt-10">
-              <h1 class="text-3xl text-center font-bold mb-6">ASC 820 Valuation Summary</h1>
-
-              <div class="custom-grid">
-                <!-- First Row (3 equal parts) -->
-                <div class="bg-white shadow rounded-lg p-4">
-                  <p class="text-sm text-gray-500 mb-1">Valuation Date</p>
-                  <h4 class="text-xl font-semibold text-gray-800">02/02/2025</h4>
-                </div>
-                <div class="bg-white shadow rounded-lg p-4">
-                  <p class="text-sm text-gray-500 mb-1">Enterprise Value</p>
-                  <h4 class="text-xl font-semibold text-gray-800">$10,000,000</h4>
-                </div>
-                <div class="bg-white shadow rounded-lg p-4">
-                  <p class="text-sm text-gray-500 mb-1">Client Ownership</p>
-                  <h4 class="text-xl font-semibold text-gray-800">80%</h4>
-                </div>
-
-                <!-- Second Row (2fr + 3fr) -->
-                <div class="bg-white shadow rounded-lg p-4 row-2" style="grid-column: span 2;">
-                  <p class="text-sm text-gray-500 mb-1">Valuation Overview</p>
-                  <p class="text-gray-700">Some longer content goes here for testing height behavior.</p>
-                </div>
-                <div class="bg-white shadow rounded-lg p-4 row-2">
-                  <p class="text-sm text-gray-500 mb-1">Valuation Details</p>
-                  <h4 class="text-xl font-semibold text-gray-800">More content</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-    </section>
-
-
-
-
-
-
-
-    <section class="flex bg-white dark:bg-gray-900 ">
-        <div class="container px-6 mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-                <div class="w-[250px] flex flex-col p-3 space-y-1 space-x-3 bg-gray-100 rounded-xl dark:bg-gray-800">
-                    <p class="text-gray-500 dark:text-gray-300">Valuation Date</p>
-                    <h1 class="text-xl font-semibold text-center text-gray-700 capitalize dark:text-white">02/02/2025</h1>
-                </div>
-
-                <div class="w-[766px] flex flex-col p-3 space-y-1 space-x-3 bg-gray-100 rounded-xl dark:bg-gray-800">
-                    <p class="text-gray-500 dark:text-gray-300">Capital Structure</p>
-                    <div class ="flex flex-row">
-                        <div class="">
-                            <div class="flex flex-col mt-6">
-                                <div class="-mx-4 -my-5 mb-3 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                                    <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-                                        <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
-                                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                                <thead class="bg-gray-50 dark:bg-gray-800">
-                                                    <tr>
-                                                        <th scope="col" class="py-1.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                                        <span>Debt</span>
-                                                        </th>
-
-                                                        <th scope="col" class="py-1.5 px-4 text-sm font-normal text-center rtl:text-right text-gray-500 dark:text-gray-400">
-                                                            Value
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
-                                                    <tr>
-                                                        <td class="px-4 py-0 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                                <div class="inline-flex items-center gap-x-3">
-                                                                    <div><h2 class="font-normal text-gray-800 dark:text-white"><b></b></h2></div>
-                                                                </div>
-                                                        </td>
-                                                        <td class="px-12 py-1 text-sm font-normal text-gray-700 whitespace-nowrap">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="px-4 py-0.5 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                            <div class="inline-flex items-center gap-x-3">
-                                                                <div>
-                                                                    <h2 class="font-normal text-gray-800 dark:text-white ">Commercial Paper</h2>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="px-6 py-0.5 text-sm font-normal text-gray-700 whitespace-nowrap">
-                                                            $    -
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="px-4 py-0.5 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                            <div class="inline-flex items-center gap-x-3">
-                                                                <div>
-                                                                    <h2 class="font-normal text-gray-800 dark:text-white ">Revolving Credit</h2>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="px-6 py-0.5  text-sm font-normal text-gray-700 whitespace-nowrap">
-                                                            40,520.50
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="px-4 py-0.5 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                            <div class="inline-flex items-center gap-x-3">
-                                                                <div>
-                                                                    <h2 class="font-normal text-gray-800 dark:text-white ">Term Loans</h2>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="px-6 py-0.5 text-sm font-normal text-gray-700 whitespace-nowrap">
-                                                            700
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="px-4 py-0.5 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                            <div class="inline-flex items-center gap-x-3">
-                                                                <div>
-                                                                    <h2 class="font-normal text-gray-800 dark:text-white ">Snr. Bonds and Notes</h2>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="px-6 py-0.5  text-sm font-normal text-gray-700 whitespace-nowrap">
-                                                            54,356.50
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="px-4 py-0.5 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                                <div class="inline-flex items-center gap-x-3">
-                                                                    <div><h2 class="font-normal text-gray-800 dark:text-white"><b>Total Debt</b></h2></div>
-                                                                </div>
-                                                        </td>
-                                                        <td class="px-6 py-0.5 text-sm font-normal text-gray-700 whitespace-nowrap"> 89,500.40
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="px-4 py-0 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                                <div class="inline-flex items-center gap-x-3">
-                                                                    <div><h2 class="font-normal text-gray-800 dark:text-white"><b></b></h2></div>
-                                                                </div>
-                                                        </td>
-                                                        <td class="px-12 py-0 text-sm font-normal text-gray-700 whitespace-nowrap">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="px-4 py-0.5 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                            <div class="inline-flex items-center gap-x-3">
-                                                                <div>
-                                                                    <h2 class="font-normal text-gray-800 dark:text-white ">Undrawn Revolver</h2>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="px-6 py-0.5  text-sm font-normal text-gray-700 whitespace-nowrap">
-                                                            10,000
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="px-4 py-0.5 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                            <div class="inline-flex items-center gap-x-3">
-                                                                <div>
-                                                                    <h2 class="font-normal text-gray-800 dark:text-white ">Undrawn Commerical Paper</h2>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="px-6 py-0.5 text-sm font-normal text-gray-700 whitespace-nowrap">
-                                                            0
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="px-4 py-.05 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                            <div class="inline-flex items-center gap-x-3">
-                                                                <div>
-                                                                    <h2 class="font-normal text-gray-800 dark:text-white ">Undrawn Term Loans</h2>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="px-6 py-0.5 text-sm font-normal text-gray-700 whitespace-nowrap">
-                                                            0
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="px-4 py-0.5 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                                <div class="inline-flex items-center gap-x-3">
-                                                                    <div><h2 class="font-normal text-gray-800 dark:text-white"><b>Total Undrawn Credit</b></h2></div>
-                                                                </div>
-                                                        </td>
-                                                        <td class="px-6 py-0.5 text-sm font-normal text-gray-700 whitespace-nowrap"> 89,500.40
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container px-4 mx-auto">
-                            <div class="flex flex-col mt-6">
-                                <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                                    <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-                                        <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
-                                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                                <thead class="bg-gray-50 dark:bg-gray-800">
-                                                    <tr>
-                                                        <th scope="col" class="py-1.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                                        <span>Equity Class</span>
-                                                        </th>
-
-                                                        <th scope="col" class="px-2 py-1.5 text-sm font-normal text-center rtl:text-right text-gray-500 dark:text-gray-400">
-                                                            Strike Price
-                                                        </th>
-
-                                                        <th scope="col" class="px-2 py-1.5 text-sm font-normal text-center rtl:text-center text-gray-500 dark:text-gray-400">
-                                                            Total Shares
-                                                        </th>
-
-                                                        <th scope="col" class="px-2 py-1.5 text-sm font-normal text-center rtl:text-right text-gray-500 dark:text-gray-400">
-                                                            FMV
-                                                        </th>
-
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
-                                                    <tr>
-                                                        <td class="px-4 py-2 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                            <div class="inline-flex items-center gap-x-3">
-                                                                <div>
-                                                                    <h2 class="font-normal text-gray-800 dark:text-white ">Series A Preferred</h2>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="px-4 py-1 text-center text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">1</td>
-                                                        <td class="px-4 py-1 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">1,000</td>
-                                                        <td class="px-4 py-1 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">1,000,000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="px-4 py-2 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                            <div class="inline-flex items-center gap-x-3">
-                                                                <div>
-                                                                    <h2 class="font-normal text-gray-800 dark:text-white ">Series A Preferred</h2>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="px-4 py-1 text-center text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">1</td>
-                                                        <td class="px-4 py-1 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">1,000</td>
-                                                        <td class="px-4 py-1 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">1,000,000</td>
-                                                    </tr>
-
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </section>
-</div>
-</div>
-</section>
 
 
 
